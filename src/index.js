@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 // import { createRoot } from 'react-dom/client'
 
 import App from './components/App';
 
 // const container = document.getElementById('app')
 const root = ReactDOM.createRoot(document.getElementById('root')); // createRoot(container!) if you use TypeScript
-root.render(<App tab="home" />);
+root.render(
+  <BrowserRouter>
+    <App tab="home" />
+  </BrowserRouter>,
+);
